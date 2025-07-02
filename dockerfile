@@ -12,6 +12,8 @@ RUN pnpm run bootstrap
 WORKDIR /app/packages/nocodb
 RUN pnpm install
 RUN pnpm add mysql
+RUN pnpm run build
+
 
 EXPOSE 8080
 CMD ["pnpm", "start"]
