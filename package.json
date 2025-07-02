@@ -10,22 +10,22 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/nocodb/nocodb.git"
-  },
-  "bugs": {
-    "url": "https://github.com/nocodb/nocodb/issues"
-  },
-  "license": "AGPL-3.0-or-later",
-  "devDependencies": {
-    "husky": "^8.0.3",
-    "lerna": "^8.2.2",
-    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
-    "mysql": "^2.18.1",
-}
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pnpm dlx lint-staged"
-    }
+ },
+"bugs": {
+  "url": "https://github.com/nocodb/nocodb/issues"
+},
+"license": "AGPL-3.0-or-later",
+"devDependencies": {
+  "husky": "^8.0.3",
+  "lerna": "^8.2.2",
+  "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
+  "mysql": "^2.18.1"
+},
+"husky": {
+  "hooks": {
+    "pre-commit": "pnpm dlx lint-staged"
+  }
+},
   },
   "lint-staged": {
     "scripts/playwright/**/*.{ts,tsx,js,json}": [
