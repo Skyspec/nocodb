@@ -26,7 +26,7 @@
     "obfuscate:build:publish": "pnpm run build:obfuscate && pnpm publish .",
     "registerIntegrations": "node build-utils/registerIntegrations.js",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "nocodb -p 8080",
+    "start": "node docker/main -p 8080",
     "start:prod": "node docker/main",
     "lint": "eslint \"src/**/*.ts\" --fix",
     "test": "jest --runInBand --forceExit --passWithNoTests",
