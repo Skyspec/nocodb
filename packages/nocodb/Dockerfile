@@ -90,5 +90,5 @@ COPY --link --from=builder /usr/src/appEntry/ /usr/src/appEntry/
 EXPOSE 8080
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 
-# Start Nocodb
-CMD ["/usr/src/appEntry/start.sh"]
+# --- DEBUG LINE: Print environment before starting ---
+CMD ["sh", "-c", "env && /usr/src/appEntry/start.sh"]
