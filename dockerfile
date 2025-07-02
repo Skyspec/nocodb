@@ -1,17 +1,17 @@
 FROM node:18
 
+FROM node:18
+
 WORKDIR /app
 COPY . .
 
-# Install pnpm
 RUN npm install -g pnpm
+RUN pnpm install
+RUN pnpm add mysql -w
 
-# Install dependencies with pnpm
+WORKDIR /app/packages/nocodb
+
 RUN pnpm install
 
-# Install mysql (add to devDependencies if you want, or force here)
-RUN pnpm add mysql --workspace-root
-
-
 EXPOSE 8080
-CMD ["pnpm", "run", "start"]
+CMD ["pnpm", "start"]
