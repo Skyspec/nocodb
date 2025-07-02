@@ -19,6 +19,11 @@
     "husky": "^8.0.3",
     "lerna": "^8.2.2",
     "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+    "dependencies": {
+  ...
+  "mysql": "^2.18.1",
+  ...
+}
   },
   "husky": {
     "hooks": {
