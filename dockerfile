@@ -11,5 +11,4 @@ RUN pnpm add mysql
 RUN pnpm run build
 EXPOSE 8080
 RUN printenv > /app/env.log
-CMD ["sh", "-c", "printenv && node docker/main -p 8080"]
-
+CMD ["sh", "-c", "printenv && node docker/main -H 0.0.0.0 -p 8080"]
