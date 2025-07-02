@@ -4,12 +4,13 @@ WORKDIR /app
 COPY . .
 
 RUN npm install -g pnpm
-
-# Install all workspace dependencies at the root
 RUN pnpm install
 
-# Add mysql to the backend workspace specifically (best practice for monorepo)
+# Bootstrap the monorepo (builds SDK, GUI, backend)
+RUN pnpm run bootstrap
+
 WORKDIR /app/packages/nocodb
+RUN pnpm install
 RUN pnpm add mysql
 
 EXPOSE 8080
